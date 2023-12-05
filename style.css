@@ -1,0 +1,51 @@
+:root {
+	--background-color: #000000;
+	--container-size: min(30vw, 30vh);
+	--form-width: 8em;
+	--form-height: 2em;
+	--form-background-color: #3A134E;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+	color: white;
+	text-decoration: none;
+	font-family: cursive;
+	transition: opacity 0.5s ease;
+}
+
+body {
+	background: var(--background-color);
+	overflow: hidden;
+}
+
+input {
+	color: black;
+	text-align: left;
+	margin: 0.1rem;
+	width: var(--form-width);
+	height: var(--form-height);
+}
+
+select, option {
+	color: black;
+}
+
+#formBox {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	background-color: var(--form-background-color);
+	width: calc(var(--form-width) * 3);
+	height: calc(var(--form-height) * 7);
+	top: 20%;
+	left: calc(50% - var(--form-width) * 3 / 2);
+	border-radius: 1em;
+}
+
+#loginForm, #registerForm {
+	margin: auto;
+}
