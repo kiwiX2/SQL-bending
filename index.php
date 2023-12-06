@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>PHP login yooo</title>
+        <script defer src="script.js"></script>
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.ico">
     </head>
-        <body>
-
+    <body>
         <?php
             session_start();
 
