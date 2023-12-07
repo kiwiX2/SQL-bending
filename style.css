@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 
 :root {
-	--primary-color: #e74c3c;
-	--accent-color: #3498db;
-	--background-color: #F2EFEA;
-	--text-color: #222222;
-	--secondary-text-color: #666666;
+	--primary-color: #D394FF;
+	--secondary-color: #ffdcb7;
+	--background-color: #151515;
+	--text-color: #FFDCB7;
 
 	--form-width: 8rem;
 	--form-height: 2rem;
@@ -42,6 +41,7 @@ body {
 select, input {
 	font-size: 1rem;
 	font-weight: bold;
+	background-color: var(--background-color);
 }
 
 input {
@@ -70,22 +70,27 @@ input {
 	margin: auto;
 }
 
-#teacherCard {
-	background-color: var(--primary-color);
-	overflow: hidden;
+.teacherCard {
+	position: fixed;
+	top: calc(50vh - (var(--card-height) / 2));
+	left: calc(50vw - (var(--card-width) / 2));
 	width: var(--card-width);
 	height: var(--card-height);
+	background-color: var(--background-color);
+	border: 4px solid var(--secondary-color);
+	overflow: hidden;
 	border-radius: var(--card-border-radius);
-	position: fixed;
+	perspective: 1000px;
+	transform-style: preserve-3d;
 }
 
-#teacherCard > * {
+.teacherCard > * {
 	padding: var(--teacher-padding);
 }
 
-#teacherCard img {
+.teacherCard img {
 	height: calc(var(--card-height) - 30vh);
-	width: var(--card-width);
+	width: calc(var(--card-width) - 5px);
 	padding-bottom: 0;
 	border-radius: 
 		calc(var(--card-border-radius) + var(--teacher-padding)) 
@@ -93,7 +98,7 @@ input {
 		0 
 		0;
 	object-fit: cover;
-	border-bottom: 0.2rem solid var(--text-color);
+	border-bottom: 0.2rem solid var(--secondary-color);
 }
 
 #teacherName {

@@ -24,7 +24,7 @@
                 </form>
             </div>
 
-            <div id='teacherCard'>
+            <div class='teacherCard'>
                 <img src='". $row['picture'] ."' alt='Teacher portrait'>
                 <p id='teacherName'>". $row['name'] ."</p>
                 <p id='teacherSubjects'>Subject(s): " . $row['subject'] ."</p>
