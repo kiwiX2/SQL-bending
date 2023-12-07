@@ -27,7 +27,5 @@
 		}
 
 	    mysqli_close($link);
-
-		header('Refresh:0');
 	}
 ?>

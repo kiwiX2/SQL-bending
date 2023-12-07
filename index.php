@@ -10,6 +10,8 @@
     </head>
     <body>
         <?php
+            ob_start();
+
             session_start();
 
             include('register.php');
@@ -22,7 +24,7 @@
                 $isLoggedIn = true;
 
                 if (isset($_POST['rate_button'])) {
-                    RateTeacher();
+                    RateTeacher(); 
                 }
             } else {
                 $isLoggedIn = false;
@@ -39,7 +41,6 @@
 
                     if (isset($_SESSION['user_id'])) {
                         header('Refresh:0');
-                        echo "Login successful! " . $_POST['login_name'];
                     } else {
                         echo "Login failed...";
                     }
@@ -58,6 +59,8 @@
                     header('Refresh:0');
                 }
             }
+
+            ob_end_flush();
         ?>
     </body>
 </html>
