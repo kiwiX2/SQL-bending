@@ -26,12 +26,13 @@
 	color: var(--text-color);
 	text-decoration: none;
 	font-family: 'Courier Prime', monospace;
-	transition: all 0.5s ease-in-out, opacity 0s;
 }
 
 body {
 	background: var(--background-color);
 	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
 }
 
 #logoutButton {
