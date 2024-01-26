@@ -1,11 +1,13 @@
 <?php 
     function DisplayRegisterForm() {
-        echo '<form id="registerForm" action="" method="post">';
-        echo '<p>Register</p>';
-        echo '<input type="text" name="name" placeholder="Username" required><br>';
-        echo '<input type="password" name="password" placeholder="Password" required><br>';
-        echo '<input type="submit" name="register_button" value="Register">';
-        echo '</form>';
+        echo "
+            <form id='registerForm' method='post'>
+            <p>Register</p>
+            <input type='text' name='name' placeholder='Username' required><br>
+            <input type='password' name='password' placeholder='Password' required><br>
+            <input type='submit' name='register_button' value='Register'>
+            </form>
+        ";
     }
 
     function Register() {    

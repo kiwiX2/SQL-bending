@@ -1,11 +1,13 @@
 <?php 
 	function DisplayLoginForm() {
-		echo '<form id="loginForm" action="" method="post">';
-	    echo '<p>Login</p>';
-	    echo '<input type="text" name="login_name" placeholder="Username" required><br>';
-	    echo '<input type="password" name="login_password" placeholder="Password"required><br>';
-	    echo '<input type="submit" name="login_button" value="Login">';
-        echo '</form>';
+		echo "
+			<form id='loginForm' method='post'>
+		    <p>Login</p>
+		    <input type='text' name='login_name' placeholder='Username' required><br>
+		    <input type='password' name='login_password' placeholder='Password'required><br>
+		    <input type='submit' name='login_button' value='Login'>
+        	</form>
+        ";
 	}
 
 	function Login() {	

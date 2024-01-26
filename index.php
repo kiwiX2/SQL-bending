@@ -11,14 +11,12 @@
     <body>
         <?php
             ob_start();
-
             session_start();
 
             include('register.php');
             include('login.php');
             include('logout.php');
             include('rating.php');
-            include('rate.php');
 
             if (isset($_SESSION['user_id'])) {
                 $isLoggedIn = true;
@@ -32,8 +30,8 @@
 
             if (!$isLoggedIn) {
                 echo '<div id="formBox">';
-                DisplayLoginForm();
-                DisplayRegisterForm();
+                    DisplayLoginForm();
+                    DisplayRegisterForm();
                 echo '</div>';
     
                 if (isset($_POST['login_button'])) {

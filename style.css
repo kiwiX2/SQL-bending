@@ -14,6 +14,7 @@
 	--card-width: 20vw;
 	--card-height: 70vh;
 	--card-border-radius: 2rem;
+	--back-line-height: 1.3rem;
 
 	--teacher-padding: 1rem;
 }
@@ -94,6 +95,24 @@ input {
 	border-radius: var(--card-border-radius);
 	perspective: 1000px;
 	transform-style: preserve-3d;
+	transition: transform 0.5s ease-in-out;
+}
+
+.teacherCardBack {
+	z-index: -1;
+	opacity: 0;
+}
+
+.ratingText {
+	z-index: -1;
+	font-size: 1.3rem;
+	text-align: center;
+	transform: scale(-1, 1);
+	line-height: var(--back-line-height);
+	padding: calc(var(--card-height) / 2 - var(--back-line-height) / 2) 
+		0 
+		calc(var(--card-height) / 2 - var(--back-line-height) / 2) 
+		0 !important;
 }
 
 .teacherCard > * {
